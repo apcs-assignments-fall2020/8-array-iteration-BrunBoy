@@ -2,20 +2,29 @@ public class MyMain {
 
     // Reverses an array
     public static int[] reverse(int[] arr) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int[] result= new int[arr.length];
+        int smeerk=arr.length;
+        for (int i=arr.length; i>0; i--){
+            result[i-1]=arr[smeerk];
+            smeerk++;
+        }
+        return result;
     }
 
     // Finds the second largest number in an array
     public static int secondLargest(int[] arr) {
-        // REPLACE WITH YOUR CODE HERE
-        return -1;
+        Arrays.sort(arr);
+        return arr[arr.length-2];
     }
 
     // Checks to see if an array contains a geometric series
     public static boolean isGeometric(int[] arr) {
-        // REPLACE WITH YOUR CODE HERE
-        return false;
+        for (int i=arr.length; i>=0; i--){
+            if (arr[i-1]/arr[i-2]!=arr[i-2]/arr[i-3]){
+                return false;
+            }
+        }
+        return true;
     }
 
 
