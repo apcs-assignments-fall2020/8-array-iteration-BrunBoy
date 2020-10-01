@@ -3,9 +3,9 @@ public class MyMain {
     // Reverses an array
     public static int[] reverse(int[] arr) {
         int[] result= new int[arr.length];
-        int smeerk=arr.length;
-        for (int i=arr.length; i>0; i--){
-            result[i-1]=arr[smeerk];
+        int smeerk=0;
+        for (int i=arr.length; i>=0; i--){
+            result[smeerk]=arr[i];
             smeerk++;
         }
         return result;
@@ -19,8 +19,9 @@ public class MyMain {
 
     // Checks to see if an array contains a geometric series
     public static boolean isGeometric(int[] arr) {
-        for (int i=arr.length; i>=0; i--){
-            if (arr[i-1]/arr[i-2]!=arr[i-2]/arr[i-3]){
+        double smeel=(double) arr[1]/arr[0];
+        for(int i=2; i<arr.length; i++){
+            if((double) (arr[i])/(double) (arr[i-1])!=smeel){
                 return false;
             }
         }
