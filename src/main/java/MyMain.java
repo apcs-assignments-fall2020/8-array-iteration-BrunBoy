@@ -1,10 +1,12 @@
+import java.util.Arrays;
+
 public class MyMain {
 
     // Reverses an array
     public static int[] reverse(int[] arr) {
         int[] result= new int[arr.length];
         int smeerk=0;
-        for (int i=arr.length; i>=0; i--){
+        for (int i=arr.length-1; i>=0; i--){
             result[smeerk]=arr[i];
             smeerk++;
         }
